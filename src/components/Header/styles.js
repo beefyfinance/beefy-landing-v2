@@ -1,6 +1,5 @@
 const styles = theme => ({
   navHeader: {
-    paddingTop: '20px',
     background: 'transparent',
     boxShadow: 'none',
     '&:hover .MuiListItem-button': {
@@ -13,6 +12,7 @@ const styles = theme => ({
   navDisplayFlex: {
     display: 'flex',
     justifyContent: 'space-between',
+    alignItems: 'center',
     paddingTop: 0,
     paddingBottom: 0,
   },
@@ -44,28 +44,18 @@ const styles = theme => ({
       height: '24px',
     },
   },
-  navLink: {
-    textDecoration: 'none',
-    textTransform: 'capitalize',
-    color: theme.palette.type === 'dark' ? '#6B7199' : '#000000',
-    '& .MuiTypography-root': {
-      fontSize: 18,
-      fontWeight: 'bold',
-      borderBottom: '3px solid transparent',
-    },
+  btnLaunchApp: {
+    borderRadius: '30px',
+    textTransform: 'none',
+    fontWeight: 'bold',
+    padding: '5px 15px 5px',
+    border: 'solid 2px #54995C',
+    backgroundColor: '#54995C',
+    color: 'white',
     '&:hover': {
-      color: 'white',
+      backgroundColor: 'transparent',
+      color: '#54995C',
     },
-    [theme.breakpoints.up('md')]: {
-      '&:hover': {
-        '& .MuiTypography-root': {
-          borderColor: 'white',
-        },
-      },
-    },
-  },
-  hide: {
-    display: 'none',
   },
 });
 
