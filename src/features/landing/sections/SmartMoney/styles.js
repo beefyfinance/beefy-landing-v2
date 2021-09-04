@@ -77,6 +77,11 @@ const styles = theme => ({
     borderRadius: '50%',
     display: 'inline-block',
   },
+  hoverIcon: {
+    '&:hover': {
+      fill: 'white',
+    },
+  },
 });
 
 export default styles;

@@ -13,10 +13,16 @@ const styles = theme => ({
     '&:hover': {
       backgroundColor: props => props.color,
       color: 'white',
+      '&:svg': {
+        fill: 'white',
+      },
     },
     '& img': {
       height: '16px',
       padding: '0 5px',
+    },
+    '& svg': {
+      margin: '0 5px',
     },
   },
 });

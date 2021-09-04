@@ -13,6 +13,8 @@ import {
 import styles from './styles';
 import OutlinedButton from 'features/landing/components/OutlinedButton';
 import { getWidgetData } from 'features/landing/utils/api';
+import Github from 'features/landing/components/Github';
+import Discord from 'features/landing/components/Discord';
 
 const useStyles = makeStyles(styles);
 
@@ -72,7 +74,7 @@ const Cards = () => {
                 href={stats.instant_invite}
               >
                 <OutlinedButton color="#7289DA">
-                  <img alt="Discord" src={require('images/socialIcons/discord.svg').default} />
+                  <Discord className={classes.hoverIcon} />
                   Discord
                 </OutlinedButton>
               </a>
@@ -121,7 +123,7 @@ const Cards = () => {
                 href={'https://github.com/beefyfinance'}
               >
                 <OutlinedButton color="#0D0E14">
-                  <img alt="BIFI" src={require('images/socialIcons/github.svg').default} />
+                  <Github />
                   Github
                 </OutlinedButton>
               </a>
