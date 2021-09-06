@@ -158,15 +158,6 @@ const Item = ({ item, chartData }) => {
           <Typography variant={'h1'}>{formatApy(item.apy.totalApy)}</Typography>
           <Typography variant={'h2'}>{t('APY')}</Typography>
         </Box>
-        <Box>
-          <Button
-            onClick={() => history.push('/' + item.network + '/vault/' + item.id)}
-            size="large"
-            className={classes.depositButton}
-          >
-            {ctaText}
-          </Button>
-        </Box>
       </div>
     </div>
   );
