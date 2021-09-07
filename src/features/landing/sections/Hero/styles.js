@@ -46,19 +46,6 @@ const styles = theme => ({
       color: '#54995C',
     },
   },
-  btn2: {
-    textTransform: 'none',
-    borderRadius: '30px',
-    fontWeight: 'bold',
-    padding: '5px 15px 5px',
-    border: 'solid 2px #54995C',
-    margin: '0 10px',
-    color: '#54995C',
-    '&:hover': {
-      backgroundColor: '#54995C',
-      color: 'white',
-    },
-  },
   networks: {
     display: 'flex',
     justifyContent: 'space-around',

@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles, Box, Container, Typography, Button, Divider } from '@material-ui/core';
 import Header from 'components/Header';
+import BegginersModal from 'components/BegginersModal';
 import styles from './styles';
 
 const useStyles = makeStyles(styles);
@@ -36,9 +37,7 @@ const Hero = () => {
             <img alt="FTM" src={require('images/networks/Fantom.png').default} />
           </Box>
           <Box mt={4} className={classes.center}>
-            <Button size="large" className={classes.btn2}>
-              Beginners guide
-            </Button>
+            <BegginersModal />
             <Button size="large" className={classes.btn}>
               Start earning
             </Button>
