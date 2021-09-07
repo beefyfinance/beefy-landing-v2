@@ -17,6 +17,7 @@ export default function App() {
   const dispatch = useDispatch();
   // const storage = localStorage.getItem('nightMode');
   //const [isNightMode, setNightMode] = React.useState(storage === null ? false : JSON.parse(storage));
+  // eslint-disable-next-line no-unused-vars
   const [isNightMode, setNightMode] = React.useState(false);
   const theme = createTheme({
     palette: {

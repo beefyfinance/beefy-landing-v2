@@ -1,5 +1,3 @@
-import { borderRadius } from '@material-ui/system';
-
 const styles = theme => ({
   root: {
     minHeight: '50vh',

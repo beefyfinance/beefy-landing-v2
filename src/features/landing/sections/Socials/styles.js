@@ -1,6 +1,9 @@
 const styles = theme => ({
   root: {
     minHeight: '50vh',
+    backgroundImage: props => `url(${props.bgImage})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'bottom',
   },
   bold: {
     fontWeight: 900,

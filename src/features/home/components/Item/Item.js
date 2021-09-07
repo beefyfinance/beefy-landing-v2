@@ -25,7 +25,6 @@ const Item = ({ item, chartData }) => {
   const t = useTranslation().t;
   const history = useHistory();
   const [hasDeposit, setHasDeposit] = useState(false);
-  const [ctaText, setCtaText] = useState(t('Deposit-Verb'));
   const balances = useSelector(state => state.balanceReducer);
 
   useEffect(() => {
@@ -39,18 +38,6 @@ const Item = ({ item, chartData }) => {
 
   const itemClassNames = `${classes.itemContainer} ${hasDeposit ? 'hasDeposit' : ''}`;
   const apyContainerClassNames = `${classes.apyContainer} ${hasDeposit ? 'hasDeposit' : ''}`;
-
-  useEffect(() => {
-    if (hasDeposit) {
-      if (item.status !== 'active') {
-        setCtaText(t('Withdraw'));
-      } else {
-        setCtaText(t('Deposit-Withdraw'));
-      }
-    } else {
-      setCtaText(t('Deposit-Verb'));
-    }
-  }, [hasDeposit, item.status, balances, t]);
 
   const hasMore3Tags = item.tags.length > 2;
 
