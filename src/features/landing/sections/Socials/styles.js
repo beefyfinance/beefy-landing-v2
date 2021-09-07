@@ -4,6 +4,7 @@ const styles = theme => ({
     backgroundImage: props => `url(${props.bgImage})`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'bottom',
+    backgroundSize: '100%',
   },
   bold: {
     fontWeight: 900,
