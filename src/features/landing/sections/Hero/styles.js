@@ -1,6 +1,6 @@
 const styles = theme => ({
   root: {
-    height: '80vh',
+    minHeight: '60vh',
   },
   content: {
     padding: '100px 20px',
@@ -57,6 +57,25 @@ const styles = theme => ({
     '&:hover': {
       backgroundColor: '#54995C',
       color: 'white',
+    },
+  },
+  networks: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    '& img': {
+      height: '30px',
+      '&:hover': {
+        transition: '0.5s',
+        transform: 'scale(1.3)',
+      },
+    },
+  },
+  bifi: {
+    height: '60px',
+    '&:hover': {
+      transition: '0.5s',
+      transform: 'scale(1.3)',
     },
   },
 });

@@ -3,7 +3,7 @@ const styles = theme => ({
     minHeight: '50vh',
   },
   content: {
-    padding: '100px 20px',
+    padding: '50px 0px',
   },
   bold: {
     fontWeight: 900,

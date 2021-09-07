@@ -14,11 +14,11 @@ const Hero = () => {
   ];
   return (
     <>
-      <Box mb={2} className={classes.root}>
+      <Box className={classes.root}>
         <Header isNightMode={false} />
         <Container maxWidth="md" className={classes.content}>
           <Box py={1} className={classes.center}>
-            <img height={60} alt="BIFI" src={require('images/BIFI.svg').default} />
+            <img className={classes.bifi} alt="BIFI" src={require('images/BIFI.svg').default} />
           </Box>
           <Box py={2} className={classes.center}>
             <img height={40} alt="BIFI" src={require('images/beefy-finance.svg').default} />
@@ -27,6 +27,13 @@ const Hero = () => {
             <Typography variant="h4" className={classes.title}>
               Multichain yield optimiser
             </Typography>
+          </Box>
+          <Box py={2} className={classes.networks}>
+            <img alt="BSC" src={require('images/networks/BSC.png').default} />
+            <img alt="AVAX" src={require('images/networks/AVAX.png').default} />
+            <img alt="HECO" src={require('images/networks/HECO.png').default} />
+            <img alt="POLY" src={require('images/networks/Polygon.png').default} />
+            <img alt="FTM" src={require('images/networks/Fantom.png').default} />
           </Box>
           <Box mt={4} className={classes.center}>
             <Button size="large" className={classes.btn2}>
