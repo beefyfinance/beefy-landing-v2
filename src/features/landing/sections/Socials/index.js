@@ -1,5 +1,15 @@
 import React from 'react';
-import { makeStyles, Box, Grid, Typography, Container, List, ListItem } from '@material-ui/core';
+import {
+  makeStyles,
+  Box,
+  Grid,
+  Typography,
+  Container,
+  List,
+  ListItem,
+  useMediaQuery,
+  useTheme,
+} from '@material-ui/core';
 import styles from './styles';
 import Discord from 'features/landing/components/Discord';
 import FooterImage from 'images/footer-bg.svg';
@@ -11,10 +21,14 @@ const Socials = () => {
     bgImage: FooterImage,
   };
   const classes = useStyles(props);
+
+  const theme = useTheme();
+  const containerWidth = useMediaQuery(theme.breakpoints.down('sm')) ? 'sm' : 'md';
+
   return (
     <>
       <Box mt={10} className={classes.root}>
-        <Container maxWidth="md">
+        <Container maxWidth={containerWidth}>
           <Grid container justifyContent="center" spacing={10} alignItems="center">
             <Grid item className={classes.center} xs={6}>
               <Box>

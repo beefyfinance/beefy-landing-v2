@@ -10,6 +10,8 @@ import {
   CardContent,
   CardActions,
 } from '@material-ui/core';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import styles from './styles';
 import OutlinedButton from 'features/landing/components/OutlinedButton';
 import { getWidgetData } from 'features/landing/utils/api';
@@ -21,9 +23,12 @@ const useStyles = makeStyles(styles);
 const SmartMoney = () => {
   const classes = useStyles();
 
+  const theme = useTheme();
+  const containerWidth = useMediaQuery(theme.breakpoints.down('sm')) ? 'sm' : 'md';
+
   return (
     <Box className={classes.root}>
-      <Container maxWidth="md" className={classes.content}>
+      <Container maxWidth={containerWidth} className={classes.content}>
         <Box mb={10} textAlign="center">
           <Typography variant="h4" className={classes.bold}>
             The Smart Money is on Beefy Finance
