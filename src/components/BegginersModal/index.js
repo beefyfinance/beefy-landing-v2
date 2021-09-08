@@ -63,7 +63,7 @@ export default function CustomizedDialogs() {
   return (
     <div>
       <Button size="lg" className={classes.btnOpenModal} onClick={handleClickOpen}>
-        Begginers Guide
+        Begginer's Guide
       </Button>
       <Dialog
         maxWidth="xl"
