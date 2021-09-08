@@ -35,9 +35,16 @@ const Header = ({ isNightMode, setNightMode }) => {
             </Button>
           </Box>
           <Box>
-            <Button size="small" className={classes.btnLaunchApp}>
-              Start Earning
-            </Button>
+            <a
+              style={{ textDecoration: 'none' }}
+              rel="noreferrer"
+              target="_blank"
+              href="https://app.beefy.finance/"
+            >
+              <Button size="small" className={classes.btnLaunchApp}>
+                Start Earning
+              </Button>
+            </a>
           </Box>
         </Container>
       </Toolbar>

@@ -38,9 +38,16 @@ const Hero = () => {
           </Box>
           <Box mt={4} className={classes.center}>
             <BegginersModal />
-            <Button size="large" className={classes.btn}>
-              Start earning
-            </Button>
+            <a
+              style={{ textDecoration: 'none' }}
+              rel="noreferrer"
+              target="_blank"
+              href="https://app.beefy.finance/"
+            >
+              <Button size="large" className={classes.btn}>
+                Start earning
+              </Button>
+            </a>
           </Box>
           <Box my={6} className={classes.stats}>
             {stats.map(stat => {

@@ -24,6 +24,11 @@ const styles = theme => ({
         width: '24px',
         paddingRight: '5px',
       },
+      '& svg': {
+        height: '16px',
+        width: '24px',
+        paddingRight: '5px',
+      },
     },
   },
   discord: {

@@ -99,11 +99,25 @@ const Cards = () => {
             </Box>
             <CardActions className={classes.center}>
               <Box>
-                <Button my={2} className={classes.btn}>
-                  Start earning
-                </Button>
+                <a
+                  style={{ textDecoration: 'none' }}
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://app.beefy.finance/"
+                >
+                  <Button my={2} className={classes.btn}>
+                    Start earning
+                  </Button>
+                </a>
                 <Box py={1}>
-                  <OutlinedButton color="#5A8E69">Lean more</OutlinedButton>
+                  <a
+                    style={{ textDecoration: 'none' }}
+                    rel="noreferrer"
+                    target="_blank"
+                    href="https://docs.beefy.finance/beefyfinance/"
+                  >
+                    <OutlinedButton color="#5A8E69">Lean more</OutlinedButton>
+                  </a>
                 </Box>
               </Box>
             </CardActions>
