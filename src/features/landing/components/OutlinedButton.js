@@ -13,8 +13,8 @@ const styles = theme => ({
     '&:hover': {
       backgroundColor: props => props.color,
       color: 'white',
-      '&:svg': {
-        fill: 'white',
+      '& svg': {
+        fill: '#FFF !important',
       },
     },
     '& img': {
