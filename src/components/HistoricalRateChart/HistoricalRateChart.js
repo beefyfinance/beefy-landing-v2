@@ -1,13 +1,8 @@
 import React from 'react';
 import { AreaChart, Area, XAxis, YAxis, Dot } from 'recharts';
-import { makeStyles } from '@material-ui/core';
-import styles from '../../features/home/styles';
 import { formatApy } from 'helpers/format';
 
 const HistoricalRateChart = ({ chartData }) => {
-  const useStyles = makeStyles(styles);
-  const classes = useStyles();
-
   const isDarkTheme = localStorage.getItem('nightMode') === 'true' ? true : false;
 
   const xAxisDataKey = 'date';
@@ -66,7 +61,6 @@ const HistoricalRateChart = ({ chartData }) => {
       <XAxis hide dataKey={xAxisDataKey} />
       <YAxis hide />
       <Area
-        className={classes.chart}
         type="monotone"
         dataKey={yAxisDataKey}
         stroke={lineColor}
