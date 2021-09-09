@@ -21,8 +21,8 @@ const Hero = () => {
           <Box py={1} className={classes.center}>
             <img className={classes.bifi} alt="BIFI" src={require('images/BIFI.svg').default} />
           </Box>
-          <Box py={2} className={classes.center}>
-            <img height={40} alt="BIFI" src={require('images/beefy-finance.svg').default} />
+          <Box className={classes.center}>
+            <img height={60} alt="BIFI" src={require('images/beefy-finance.svg').default} />
           </Box>
           <Box py={1} textAlign="center" className={classes.center}>
             <Typography variant="h4" className={classes.title}>
