@@ -30,11 +30,12 @@ const Hero = () => {
             </Typography>
           </Box>
           <Box py={2} className={classes.networks}>
-            <img alt="BSC" src={require('images/networks/BSC.png').default} />
-            <img alt="AVAX" src={require('images/networks/AVAX.png').default} />
-            <img alt="HECO" src={require('images/networks/HECO.png').default} />
-            <img alt="POLY" src={require('images/networks/Polygon.png').default} />
-            <img alt="FTM" src={require('images/networks/Fantom.png').default} />
+            <img alt="BSC" src={require('images/networks/BSC-1.svg').default} />
+            <img alt="AVAX" src={require('images/networks/AVAX-1.svg').default} />
+            <img alt="HECO" src={require('images/networks/HECO-1.svg').default} />
+            <img alt="POLY" src={require('images/networks/Polygon-1.svg').default} />
+            <img alt="FTM" src={require('images/networks/Fantom-1.svg').default} />
+            <img alt="ONE" src={require('images/networks/Harmony.svg').default} />
           </Box>
           <Box mt={4} className={classes.center}>
             <BegginersModal />
