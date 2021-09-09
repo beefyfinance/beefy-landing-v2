@@ -3,7 +3,7 @@ import { makeStyles, Box, Avatar, FormControl, Typography, Grid } from '@materia
 import { renderIcon } from '@download/blockies';
 import { createCanvas } from 'canvas';
 import styles from './styles';
-import reduxActions from 'features/redux/actions';
+import reduxActions from 'redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import Loader from 'components/loader/loader';

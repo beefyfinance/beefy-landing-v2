@@ -3,10 +3,10 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { ThemeProvider, CssBaseline } from '@material-ui/core';
 import { createTheme } from '@material-ui/core/styles';
 import { useDispatch } from 'react-redux';
-import reduxActions from './features/redux/actions';
+import reduxActions from './redux/actions';
 import { useTranslation } from 'react-i18next';
 
-const Landing = React.lazy(() => import(`features/landing`));
+const Landing = React.lazy(() => import(`Pages/landing`));
 
 const PageNotFound = () => {
   const { t } = useTranslation();
