@@ -31,7 +31,7 @@ const Header = ({ isNightMode, setNightMode }) => {
                 history.push('/');
               }}
             >
-              beefy.finance
+              Beefy.Finance
             </Button>
           </Box>
           <Box>
@@ -42,7 +42,7 @@ const Header = ({ isNightMode, setNightMode }) => {
               href="https://app.beefy.finance/"
             >
               <Button size="small" className={classes.btnLaunchApp}>
-                Start Earning
+                {t('Btn-StartEarning')}
               </Button>
             </a>
           </Box>

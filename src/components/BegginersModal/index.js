@@ -9,6 +9,7 @@ import MuiDialogContent from '@material-ui/core/DialogContent';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
+import { useTranslation } from 'react-i18next';
 import styles from './styles';
 import { Grid } from '@material-ui/core';
 
@@ -47,6 +48,7 @@ const DialogContent = withStyles(theme => ({
 }))(MuiDialogContent);
 
 export default function CustomizedDialogs() {
+  const { t } = useTranslation();
   const [open, setOpen] = React.useState(false);
 
   const theme = useTheme();
@@ -63,10 +65,10 @@ export default function CustomizedDialogs() {
   return (
     <div>
       <Button size="lg" className={classes.btnOpenModal} onClick={handleClickOpen}>
-        Begginer's Guide
+        {t('Btn-Begginers')}
       </Button>
       <Dialog
-        maxWidth="xl"
+        maxWidth="lg"
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
@@ -75,13 +77,13 @@ export default function CustomizedDialogs() {
         <DialogTitle id="customized-dialog-title" onClose={handleClose} />
         <DialogContent py={5}>
           <Box my={5} textAlign="center">
-            <Typography variant="h4" className={classes.bold}>
-              What is Yield Farming ?
-            </Typography>
+            <Box py={4}>
+              <Typography variant="h4" className={classes.bold}>
+                {t('Modal-Title')}
+              </Typography>
+            </Box>
             <Typography variant="h6" className={classes.text}>
-              Yield farming is a hands-on way to generate interest with your crypto. Beefy is a
-              yield farming optimizer that does all that for you.The results are safe, automated and
-              decentralized investments with spectacular ROI, for very little effort.
+              {t('Modal-Content')}
             </Typography>
           </Box>
           <Box my={5} textAlign="center" display="flex" justifyContent="center">
@@ -89,10 +91,10 @@ export default function CustomizedDialogs() {
               <Grid className={classes.withArrow} item xs={12} md={4}>
                 <Box mx={5}>
                   <Typography variant="h6" className={classes.bold}>
-                    Get Some Tokens
+                    {t('Modal-Item-Title-1')}
                   </Typography>
                   <Typography variant="body" className={classes.text}>
-                    Whatever tokens you choose, Beefy is the best place to put your assets to work
+                    {t('Modal-Item-Content-1')}
                   </Typography>
                 </Box>
                 <img height={20} alt="arrow" src={require('images/arrow.svg').default} />
@@ -100,10 +102,10 @@ export default function CustomizedDialogs() {
               <Grid className={classes.withArrow} item xs={12} md={4}>
                 <Box mx={5}>
                   <Typography variant="h6" className={classes.bold}>
-                    Deposit on Beefy
+                    {t('Modal-Item-Title-2')}
                   </Typography>
                   <Typography variant="body" className={classes.text}>
-                    When you store your tokens in our vaults, we find ways to add compound interest
+                    {t('Modal-Item-Content-2')}
                   </Typography>
                 </Box>
                 <img height={20} alt="arrow" src={require('images/arrow.svg').default} />
@@ -111,20 +113,26 @@ export default function CustomizedDialogs() {
               <Grid item xs={12} md={4}>
                 <Box mx={5}>
                   <Typography variant="h6" className={classes.bold}>
-                    Admire your yield
+                    {t('Modal-Item-Title-3')}
                   </Typography>
                   <Typography variant="body" className={classes.text}>
-                    We auto-sell the reward tokens you earn, to buy you more of what you staked,
-                    amplifying your yield
+                    {t('Modal-Item-Content-3')}
                   </Typography>
                 </Box>
               </Grid>
             </Grid>
           </Box>
           <Box textAlign="center">
-            <Button size="lg" className={classes.btnOpenModal}>
-              Lean More
-            </Button>
+            <a
+              style={{ textDecoration: 'none' }}
+              rel="noreferrer"
+              target="_blank"
+              href="https://docs.beefy.finance/beefyfinance/"
+            >
+              <Button size="lg" className={classes.btnOpenModal}>
+                {t('Btn-LeanMore')}
+              </Button>
+            </a>
           </Box>
         </DialogContent>
       </Dialog>

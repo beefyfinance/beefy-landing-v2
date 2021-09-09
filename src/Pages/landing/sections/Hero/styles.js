@@ -65,6 +65,9 @@ const styles = theme => ({
       transform: 'scale(1.3)',
     },
   },
+  text: {
+    color: '#A69885',
+  },
 });
 
 export default styles;

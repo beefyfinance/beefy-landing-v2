@@ -16,10 +16,12 @@ import styles from './styles';
 import Discord from 'components/Discord';
 import FooterImage from 'images/footer-bg.svg';
 import Github from 'components/Github';
+import { useTranslation } from 'react-i18next';
 
 const useStyles = makeStyles(styles);
 
 const Socials = () => {
+  const { t } = useTranslation();
   const props = {
     bgImage: FooterImage,
   };
@@ -35,7 +37,7 @@ const Socials = () => {
           <Grid container justifyContent="center" spacing={10} alignItems="center">
             <Grid item className={classes.center} xs={6}>
               <Box>
-                <Typography className={classes.bold}>Lean More</Typography>
+                <Typography className={classes.bold}>{t('Socials-LeanMore')}</Typography>
                 <List className={classes.items}>
                   <ListItem>
                     <a
@@ -44,7 +46,7 @@ const Socials = () => {
                       target="_blank"
                       href="https://github.com/beefyfinance"
                     >
-                      <Github /> Github
+                      <Github /> {t('Socials-LeanMoreGithub')}
                     </a>
                   </ListItem>
                   <ListItem>
@@ -54,7 +56,8 @@ const Socials = () => {
                       target="_blank"
                       href="https://docs.beefy.finance/beefyfinance/"
                     >
-                      <img src={require('images/docs.svg').default} alt="docs" /> Docs
+                      <img src={require('images/docs.svg').default} alt="docs" />{' '}
+                      {t('Socials-LeanMoreDocs')}
                     </a>
                   </ListItem>
                   <ListItem>
@@ -64,7 +67,7 @@ const Socials = () => {
                       target="_blank"
                       href="https://vote.beefy.finance/"
                     >
-                      <HowToVoteIcon /> Vote
+                      <HowToVoteIcon /> {t('Socials-LeanMoreVote')}
                     </a>
                   </ListItem>
                   <ListItem>
@@ -74,7 +77,7 @@ const Socials = () => {
                       target="_blank"
                       href="https://forum.beefy.finance/"
                     >
-                      <ForumIcon /> Forum
+                      <ForumIcon /> {t('Socials-LeanMoreForum')}
                     </a>
                   </ListItem>
                 </List>
@@ -82,7 +85,7 @@ const Socials = () => {
             </Grid>
             <Grid item className={classes.center} xs={6}>
               <Box>
-                <Typography className={classes.bold}>Community</Typography>
+                <Typography className={classes.bold}>{t('Socials-Comunnity')}</Typography>
                 <List className={classes.items}>
                   <ListItem>
                     <a
@@ -92,7 +95,7 @@ const Socials = () => {
                       href="http://discord.gg/beefyfinance"
                     >
                       <Discord className={classes.discord} color="#0D0E14" />
-                      Discord
+                      {t('Socials-ComunnityDiscord')}
                     </a>
                   </ListItem>
                   <ListItem>
@@ -103,7 +106,7 @@ const Socials = () => {
                       href="https://t.me/beefyfinance"
                     >
                       <img src={require('images/socialIcons/telegram.svg').default} alt="star" />{' '}
-                      Telegram
+                      {t('Socials-ComunnityTelegram')}
                     </a>
                   </ListItem>
                   <ListItem>
@@ -114,7 +117,7 @@ const Socials = () => {
                       href="https://twitter.com/beefyfinance"
                     >
                       <img src={require('images/socialIcons/twitter.svg').default} alt="docs" />{' '}
-                      Twitter
+                      {t('Socials-ComunnityTwitter')}
                     </a>
                   </ListItem>
 
@@ -126,7 +129,7 @@ const Socials = () => {
                       href=" https://www.reddit.com/r/Beefy/"
                     >
                       <img src={require('images/socialIcons/reddit.svg').default} alt="docs" />{' '}
-                      Reddit
+                      {t('Socials-ComunnityReddit')}
                     </a>
                   </ListItem>
                 </List>

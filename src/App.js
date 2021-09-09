@@ -33,7 +33,7 @@ export default function App() {
       MuiCssBaseline: {
         '@global': {
           body: {
-            backgroundColor: isNightMode ? '#1B203A' : '#fff',
+            backgroundColor: isNightMode ? '#1B203A' : '#FEFAF4',
           },
         },
       },

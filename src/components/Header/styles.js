@@ -7,7 +7,7 @@ const styles = theme => ({
     },
   },
   hasPortfolio: {
-    backgroundColor: theme.palette.type === 'dark' ? '#0D0E14' : '#fff',
+    backgroundColor: theme.palette.type === 'dark' ? '#0D0E14' : '#FEFAF4',
   },
   navDisplayFlex: {
     display: 'flex',

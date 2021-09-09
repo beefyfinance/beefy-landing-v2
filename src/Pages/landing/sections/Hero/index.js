@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles, Box, Container, Typography, Button, Divider } from '@material-ui/core';
+import { useTranslation } from 'react-i18next';
 import Header from 'components/Header';
 import BegginersModal from 'components/BegginersModal';
 import styles from './styles';
@@ -8,10 +9,11 @@ const useStyles = makeStyles(styles);
 
 const Hero = () => {
   const classes = useStyles();
+  const { t } = useTranslation();
   const stats = [
-    { key: 1, value: '$545.5M', caption: 'TVL' },
-    { key: 2, value: '$4.5M', caption: 'Total Rewards paid' },
-    { key: 3, value: '$150.5M', caption: 'Market cap' },
+    { key: 1, value: '$545.5M', caption: t('TVL') },
+    { key: 2, value: '$4.5M', caption: t('Total-Rewards') },
+    { key: 3, value: '$150.5M', caption: t('Market-cap') },
   ];
   return (
     <>
@@ -26,7 +28,7 @@ const Hero = () => {
           </Box>
           <Box py={1} textAlign="center" className={classes.center}>
             <Typography variant="h4" className={classes.title}>
-              Multichain yield optimiser
+              {t('Hero-Multichain')}
             </Typography>
           </Box>
           <Box py={2} className={classes.networks}>
@@ -46,7 +48,7 @@ const Hero = () => {
               href="https://app.beefy.finance/"
             >
               <Button size="large" className={classes.btn}>
-                Start earning
+                {t('Btn-StartEarning')}
               </Button>
             </a>
           </Box>
@@ -57,7 +59,9 @@ const Hero = () => {
                   <Typography variant="h4" className={classes.bold}>
                     {stat.value}
                   </Typography>
-                  <Typography variant="caption">{stat.caption}</Typography>
+                  <Typography className={classes.text} variant="caption">
+                    {stat.caption}
+                  </Typography>
                 </Box>
               );
             })}

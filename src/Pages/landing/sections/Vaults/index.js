@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { makeStyles, Container, Box, Typography } from '@material-ui/core';
 import Item from 'components/Item';
 import BigNumber from 'bignumber.js';
+import { useTranslation } from 'react-i18next';
 
 import reduxActions from 'redux/actions';
 
@@ -169,13 +170,15 @@ const Vaults = () => {
     }, 60000);
   }, [dispatch]);
 
+  const { t } = useTranslation();
+
   return (
     <Box my={4} className={classes.root}>
       {console.log(vault)}
       <Container>
         <Box textAlign="center">
           <Typography className={classes.bold} variant="h4">
-            Featured vaults
+            {t('Vaults-Title')}
           </Typography>
         </Box>
         {isEmpty(filtered) ? (
