@@ -33,6 +33,8 @@ export default function App() {
       MuiCssBaseline: {
         '@global': {
           body: {
+            maxWidth: '100%',
+            overflowX: 'hidden',
             backgroundColor: isNightMode ? '#1B203A' : '#FEFAF4',
           },
         },

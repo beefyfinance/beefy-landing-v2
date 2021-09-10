@@ -26,7 +26,7 @@ const SmartMoney = () => {
   const { t } = useTranslation();
 
   const theme = useTheme();
-  const containerWidth = useMediaQuery(theme.breakpoints.down('sm')) ? 'sm' : 'md';
+  const containerWidth = useMediaQuery(theme.breakpoints.down('sm')) ? 'xs' : 'md';
 
   return (
     <Box className={classes.root}>

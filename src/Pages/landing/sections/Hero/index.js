@@ -1,6 +1,8 @@
 import React from 'react';
 import { makeStyles, Box, Container, Typography, Button, Divider } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Header from 'components/Header';
 import BegginersModal from 'components/BegginersModal';
 import styles from './styles';
@@ -10,6 +12,10 @@ const useStyles = makeStyles(styles);
 const Hero = () => {
   const classes = useStyles();
   const { t } = useTranslation();
+
+  const theme = useTheme();
+  const containerWidth = useMediaQuery(theme.breakpoints.down('sm')) ? 'xs' : 'md';
+
   const stats = [
     { key: 1, value: '$545.5M', caption: t('TVL') },
     { key: 2, value: '$4.5M', caption: t('Total-Rewards') },
@@ -19,7 +25,7 @@ const Hero = () => {
     <>
       <Box className={classes.root}>
         <Header isNightMode={false} />
-        <Container maxWidth="md" className={classes.content}>
+        <Container maxWidth={containerWidth} className={classes.content}>
           <Box py={1} className={classes.center}>
             <img className={classes.bifi} alt="BIFI" src={require('images/BIFI.svg').default} />
           </Box>

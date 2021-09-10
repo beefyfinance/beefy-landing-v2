@@ -5,6 +5,8 @@ import { makeStyles, Container, Box, Typography } from '@material-ui/core';
 import Item from 'components/Item';
 import BigNumber from 'bignumber.js';
 import { useTranslation } from 'react-i18next';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import reduxActions from 'redux/actions';
 
@@ -171,11 +173,12 @@ const Vaults = () => {
   }, [dispatch]);
 
   const { t } = useTranslation();
+  const theme = useTheme();
+  const containerWidth = useMediaQuery(theme.breakpoints.down('sm')) ? 'xs' : 'md';
 
   return (
     <Box my={4} className={classes.root}>
-      {console.log(vault)}
-      <Container>
+      <Container maxWidth={containerWidth}>
         <Box textAlign="center">
           <Typography className={classes.bold} variant="h4">
             {t('Vaults-Title')}
