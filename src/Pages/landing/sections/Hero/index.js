@@ -34,7 +34,7 @@ const Hero = () => {
           <Box py={2} className={classes.networks}>
             <img alt="BSC" src={require('images/networks/BSC-1.svg').default} />
             <img alt="AVAX" src={require('images/networks/AVAX-1.svg').default} />
-            <img alt="HECO" src={require('images/networks/HECO-1.svg').default} />
+            <img alt="HECO" src={require('images/networks/heco-1.svg').default} />
             <img alt="POLY" src={require('images/networks/Polygon-1.svg').default} />
             <img alt="FTM" src={require('images/networks/Fantom-1.svg').default} />
             <img alt="ONE" src={require('images/networks/Harmony.svg').default} />
