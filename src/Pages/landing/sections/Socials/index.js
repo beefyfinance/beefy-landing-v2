@@ -28,7 +28,7 @@ const Socials = () => {
   const classes = useStyles(props);
 
   const theme = useTheme();
-  const containerWidth = useMediaQuery(theme.breakpoints.down('sm')) ? 'sm' : 'md';
+  const containerWidth = useMediaQuery(theme.breakpoints.down('sm')) ? 'xs' : 'md';
 
   return (
     <>
