@@ -34,6 +34,19 @@ const styles = theme => ({
       },
     },
   },
+  btnSection: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    '& a ': {
+      marginLeft: '-2rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      '& a ': {
+        marginLeft: '0',
+      },
+    },
+  },
 });
 
 export default styles;

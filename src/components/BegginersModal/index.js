@@ -87,7 +87,7 @@ export default function CustomizedDialogs() {
             </Typography>
           </Box>
           <Box my={5} textAlign="center" display="flex" justifyContent="center">
-            <Grid container spacing={4}>
+            <Grid container>
               <Grid className={classes.withArrow} item xs={12} md={4}>
                 <Box mx={5}>
                   <Typography variant="h6" className={classes.bold}>
@@ -122,7 +122,7 @@ export default function CustomizedDialogs() {
               </Grid>
             </Grid>
           </Box>
-          <Box textAlign="center">
+          <Box className={classes.btnSection}>
             <a
               style={{ textDecoration: 'none' }}
               rel="noreferrer"
