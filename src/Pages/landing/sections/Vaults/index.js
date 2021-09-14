@@ -174,7 +174,7 @@ const Vaults = () => {
 
   const { t } = useTranslation();
   const theme = useTheme();
-  const containerWidth = useMediaQuery(theme.breakpoints.down('sm')) ? 'xs' : 'md';
+  const containerWidth = useMediaQuery(theme.breakpoints.down('sm')) ? 'xs' : 'lg';
 
   return (
     <Box my={4} className={classes.root}>
