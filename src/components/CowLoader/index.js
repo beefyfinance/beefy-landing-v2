@@ -8,11 +8,7 @@ const CowLoader = ({ text }) => {
   const classes = useStyles();
   return (
     <Box textAlign="center" className={classes.bifiLoader}>
-      <img
-        alt="BIFI"
-        className={classes.rotateIcon}
-        src={require('../../images/BIFI.svg').default}
-      />
+      <img alt="BIFI" className={classes.rotateIcon} src={require('images/Cow.svg').default} />
       <Box className={classes.text}>{text}</Box>
     </Box>
   );

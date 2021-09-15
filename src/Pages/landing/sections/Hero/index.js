@@ -27,10 +27,10 @@ const Hero = () => {
         <Header isNightMode={false} />
         <Container maxWidth={containerWidth} className={classes.content}>
           <Box py={1} className={classes.center}>
-            <img className={classes.bifi} alt="BIFI" src={require('images/BIFI.svg').default} />
+            <img className={classes.bifi} alt="BIFI" src={require('images/Cow.svg').default} />
           </Box>
-          <Box className={classes.center}>
-            <img height={60} alt="BIFI" src={require('images/beefy-finance.svg').default} />
+          <Box my={2} className={classes.center}>
+            <img height={40} alt="BIFI" src={require('images/beefy-finance.svg').default} />
           </Box>
           <Box py={1} textAlign="center" className={classes.center}>
             <Typography variant="h4" className={classes.title}>
@@ -39,11 +39,12 @@ const Hero = () => {
           </Box>
           <Box py={2} className={classes.networks}>
             <img alt="BSC" src={require('images/networks/BSC-1.svg').default} />
-            <img alt="AVAX" src={require('images/networks/AVAX-1.svg').default} />
+            <img alt="AVAX" src={require('images/networks/Avax-1.svg').default} />
             <img alt="HECO" src={require('images/networks/heco-1.svg').default} />
             <img alt="POLY" src={require('images/networks/Polygon-1.svg').default} />
             <img alt="FTM" src={require('images/networks/Fantom-1.svg').default} />
-            <img alt="ONE" src={require('images/networks/Harmony.svg').default} />
+            <img alt="ONE" src={require('images/networks/Harmony-1.svg').default} />
+            <img alt="ARB" src={require('images/networks/arbitrum-1.svg').default} />
           </Box>
           <Box mt={4} className={classes.center}>
             <BegginersModal />

@@ -25,7 +25,7 @@ const Header = ({ isNightMode, setNightMode }) => {
       <Toolbar disableGutters={true}>
         <Container maxWidth="lg" className={classes.navDisplayFlex}>
           <Box className={classes.beefy}>
-            <img alt="BIFI" src={require('images/BIFI.svg').default} />
+            <img alt="BIFI" src={require('images/Cow.svg').default} />
             <Button
               onClick={() => {
                 history.push('/');

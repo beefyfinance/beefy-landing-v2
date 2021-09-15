@@ -64,7 +64,7 @@ const Cards = () => {
             <Typography className={classes.bold}>{t('Discord-Card-Title')}</Typography>
             <Box py={2} className={classes.center}>
               <Box className={classes.bifiCow}>
-                <img alt="cow" src={require('images/cow.png').default} />
+                <img alt="BIFI" src={require('images/BIFI.svg').default} />
               </Box>
             </Box>
             <Box py={2}>
